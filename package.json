@@ -1,0 +1,61 @@
+{
+  "name": "surveillance",
+  "version": "0.0.0",
+  "browser": "dist/surveillance.min.js",
+  "main": "dist/surveillance.js",
+  "repository": "https://github.com/theuprising/surveillance.js",
+  "author": "Andrew J. Monks <a@monks.co>",
+  "license": "ISC",
+  "files": [
+    "README.md",
+    "es/",
+    "dist/",
+    "docs/"
+  ],
+  "scripts": {
+    "bootstrap": "pre-commit install",
+    "dev": "run-p *:watch",
+    "build": "run-p build:rollup build:es",
+    "build:rollup": "rollup -c",
+    "build:es": "babel 'src' -d es",
+    "build:watch": "rollup -c -w",
+    "lint": "pre-commit run --all-files",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-prettier": "^2.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-prettier": "^2.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4",
+    "npm-run-all": "^4.0.2",
+    "prettier": "^1.4.4",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-watch": "^4.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.test\\.js$": "<rootDir>/testPreprocessor.js"
+    }
+  }
+}
