@@ -2,11 +2,7 @@ const babel = require('babel-core')
 
 const config = {
   presets: [['env', { loose: true }]],
-  plugins: [
-    'external-helpers',
-    'transform-export-extensions',
-    'transform-object-rest-spread',
-  ],
+  plugins: ['transform-export-extensions', 'transform-object-rest-spread'],
 }
 
 module.exports = {

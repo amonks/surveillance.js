@@ -1,7 +1,7 @@
 {
-  "presets": ["es2015-rollup"],
+  "presets": [["latest", {"loose": true,
+                          "modules": "commonjs"}]],
   "plugins": [
-    "external-helpers",
-    "transform-runtime",
+    ["transform-runtime", {"polyfill": true, helpers: true, "regenerator": true}],
     "transform-export-extensions",
     "transform-object-rest-spread"]}

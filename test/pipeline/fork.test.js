@@ -2,10 +2,12 @@
 
 import * as surveillance from '../..'
 
-describe('surveillance.pipes.fork', () => {
+console.log('IMPORTED', surveillance)
+
+describe('surveillance.pipeline.fork', () => {
   it('applies a number of functions to a value, returning an array', async () => {
     expect(
-      await surveillance.pipes.fork(a => `first-${a}`, a => `second-${a}`)(
+      await surveillance.pipeline.fork(a => `first-${a}`, a => `second-${a}`)(
         'event',
       ),
     ).toEqual(['first-event', 'second-event'])
@@ -13,7 +15,7 @@ describe('surveillance.pipes.fork', () => {
 
   it('works with async functions', async () => {
     expect(
-      await surveillance.pipes.fork(
+      await surveillance.pipeline.fork(
         async a => `first-${a}`,
         async a => `second-${a}`,
       )('event'),

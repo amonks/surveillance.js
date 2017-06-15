@@ -2,10 +2,10 @@
 
 import * as surveillance from '../..'
 
-describe('surveillance.pipes.merge', () => {
+describe('surveillance.pipeline.merge', () => {
   it('merges objects synchronously', () => {
     expect(
-      surveillance.pipes.merge([
+      surveillance.pipeline.merge([
         { a: 3, b: 3, c: 3 },
         { a: 2, b: 2 },
         { a: 1 },

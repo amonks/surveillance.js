@@ -1,5 +1,5 @@
 /**
- * ## pipes/pipeline.js
+ * ## surveillance/pipeline/build
  *
  * build a reactiveish pipeline from a simple data structure
  */
