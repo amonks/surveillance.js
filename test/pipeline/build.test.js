@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import * as surveillance from '../..'
+import * as surveillance from '../../src'
 
 describe('surveillance.pipeline.build', () => {
   it('throws an error when given an invalid pipeline type', async () => {

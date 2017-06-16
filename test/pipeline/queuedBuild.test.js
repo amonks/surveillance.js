@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import * as surveillance from '../..'
+import * as surveillance from '../../src'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 

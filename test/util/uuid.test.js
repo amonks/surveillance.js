@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import * as surveillance from '../..'
+import * as surveillance from '../../src'
 
 describe('surveillance.util.uuid', () => {
   it('produces a 36-character string', () => {

@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import * as surveillance from '../..'
+import * as surveillance from '../../src'
 
 describe('surveillance.pipeline.fork', () => {
   it('applies a number of functions to a value, returning an array', async () => {

@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import * as surveillance from '../..'
+import * as surveillance from '../../src'
 
 describe('surveillance.filters.sample', () => {
   it('always passes through when the rate is 1', () => {
