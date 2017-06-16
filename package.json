@@ -1,6 +1,6 @@
 {
   "name": "surveillance",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "main": "dist/cjs/surveillance.js",
   "repository": "https://github.com/theuprising/surveillance.js",
   "author": "Andrew J. Monks <a@monks.co>",
@@ -17,7 +17,8 @@
     "build:watch": "webpack --watch",
     "lint": "pre-commit run --all-files",
     "test": "jest --coverage",
-    "test:watch": "jest --watch --coverage"
+    "test:watch": "jest --watch --coverage",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
     "@amonks/webpack-helpers": "^2.0.0",
@@ -53,7 +54,8 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^4.0.0",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "semantic-release": "^6.3.6"
   },
   "dependencies": {},
   "jest": {
