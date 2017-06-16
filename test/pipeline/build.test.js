@@ -52,6 +52,15 @@ describe('surveillance.pipeline.build', () => {
     expect(await pipeline('event')).toBe('async-application-event')
   })
 
+  it('throws when given a bad reference', async () => {
+    await expect(
+      surveillance.pipeline.build({
+        pipeline: 'fn',
+        elements: {},
+      }),
+    ).rejects.toBeDefined()
+  })
+
   it('handles references to elements with no arguments', async () => {
     const pipeline = await surveillance.pipeline.build({
       pipeline: 'fn',

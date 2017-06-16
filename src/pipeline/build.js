@@ -10,7 +10,9 @@ const build = async ({ pipeline, elements }) => {
       return pipeline
 
     case typeof pipeline === 'string':
-      return elements[pipeline]
+      const resolvedRef = elements[pipeline]
+      if (resolvedRef === undefined) throw Error(`bad ref: ${pipeline}`)
+      return resolvedRef
 
     case Array.isArray(pipeline):
       const [ref, ...args] = pipeline
