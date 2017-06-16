@@ -4,7 +4,9 @@
  * build a reactiveish pipeline from a simple data structure
  */
 
-const build = async ({ pipeline, elements }) => {
+const build = async conf => {
+  const { elements, pipeline } = conf.pipeline ? conf : { pipeline: conf }
+
   switch (true) {
     case typeof pipeline === 'function':
       return pipeline
