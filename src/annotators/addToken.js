@@ -7,7 +7,7 @@ const getToken = () => {
 
   // return a token from localStorage if there is one
   try {
-    token = window.localStorage.get(localStorageKey)
+    token = window.localStorage.getItem(localStorageKey)
     if (token) return token
   } catch (e) {}
 
@@ -15,7 +15,7 @@ const getToken = () => {
 
   // try to set the new token in localStorage
   try {
-    window.localStorage.set(localStorageKey, token)
+    window.localStorage.setItem(localStorageKey, token)
   } catch (e) {}
 
   return token
