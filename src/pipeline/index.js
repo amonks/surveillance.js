@@ -1,3 +1,4 @@
+export queuedBuild from './queuedBuild'
 export build from './build'
 export stop from './stop'
 

@@ -1,7 +1,6 @@
 todo
 
 - handle STOP
-- add queue
 - add semantic-release
 - make `require('surveillance/sinks/keen')` work
 - format events correctly for GA
