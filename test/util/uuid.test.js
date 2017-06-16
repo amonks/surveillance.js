@@ -7,6 +7,11 @@ describe('surveillance.util.uuid', () => {
     expect(surveillance.util.uuid().length).toBe(36)
   })
 
+  it('works with performance.now if available', () => {
+    window.performance = { now: jest.fn(() => 0) }
+    expect(surveillance.util.uuid().length).toBe(36)
+  })
+
   it("doesn't produce the same string twice", () => {
     const cache = []
     for (let i = 0; i++; i <= 1000) {
