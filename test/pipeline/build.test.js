@@ -17,6 +17,11 @@ describe('surveillance.pipeline.build', () => {
     ).rejects.toBeDefined()
   })
 
+  it('treats non-object input as a straight pipeline', async () => {
+    const pipeline = await surveillance.pipeline.build(e => `pipelined-${e}`)
+    expect(await pipeline('event')).toBe('pipelined-event')
+  })
+
   it('works with a synchronous function', async () => {
     const pipeline = await surveillance.pipeline.build({
       pipeline: e => `function-${e}`,
