@@ -52,6 +52,9 @@ const build = async conf => {
       // pass in args
       return await fn(...args)
 
+    case typeof pipeline.then === 'function':
+      return await pipeline
+
     default:
       throw Error(`unexpected item type in pipeline.\n"${pipeline}"`)
   }
