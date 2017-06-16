@@ -43,6 +43,13 @@ describe('surveillance.pipeline.build', () => {
     expect(await pipeline('event')).toBe('async-event')
   })
 
+  it('works with a promised function', async () => {
+    const pipeline = await surveillance.pipeline.build({
+      pipeline: new Promise(resolve => resolve(e => `promise-${e}`)),
+    })
+    expect(await pipeline('event')).toBe('promise-event')
+  })
+
   it('treats an array as a function application', async () => {
     const pipeline = await surveillance.pipeline.build({
       pipeline: [(a, b) => e => `${a}-${b}-${e}`, 'this', 'that'],
