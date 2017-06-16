@@ -1,12 +1,6 @@
-todo
-
-- document STOP
-- add semantic-release
-- document `require('surveillance/src/sinks/keen')`-style module-require
-- format events correctly for GA
-- add more elements!
-
 # Surveillance.js
+
+**not released yet**
 
 > Monitor the shit out of your hapless users
 
