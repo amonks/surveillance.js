@@ -19,7 +19,6 @@ describe('surveillance/annotators/addToken', () => {
   it('gets a token from localStorage if there is one', () => {
     const obj = { a: 1 }
     const out = surveillance.annotators.addToken()(obj)
-    console.log(window.localStorage)
     expect(out.token).toBe('token-from-local-storage')
     expect(window.localStorage.getItem.mock.calls).toEqual([
       ['__surveillance_token__'],
@@ -44,7 +43,6 @@ describe('surveillance/annotators/addToken', () => {
       throw Error()
     })
     const out = surveillance.annotators.addToken()(obj)
-    console.log('TOKEN', out.token)
     expect(out.token).toBeDefined()
     expect(out.token.length).toBe(36)
   })
