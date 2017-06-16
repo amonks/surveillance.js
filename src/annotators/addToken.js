@@ -1,11 +1,9 @@
 import { uuid } from '../util'
 
-let token = null
-
 const localStorageKey = '__surveillance_token__'
 
 const getToken = () => {
-  if (token) return token
+  let token = null
 
   // return a token from localStorage if there is one
   try {
