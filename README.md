@@ -12,6 +12,8 @@ todo
 
 Surveillance.js is a small and extensible library for event pipelines in the browser.
 
+[![Coverage Status](https://coveralls.io/repos/github/theuprising/surveillance.js/badge.svg?branch=master)](https://coveralls.io/github/theuprising/surveillance.js?branch=master)
+
 ## Example
 
 ```js
