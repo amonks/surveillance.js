@@ -16,7 +16,11 @@ const build = async ({ pipeline, elements }) => {
 
     case Array.isArray(pipeline):
       const [ref, ...args] = pipeline
+
+      // resolve ref (or recursive call, I guess)
       const fn = await build({ pipeline: ref, elements })
+
+      // pass in args
       return await fn(...args)
 
     default:
