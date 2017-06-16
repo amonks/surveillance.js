@@ -1,10 +1,10 @@
 todo
 
-- handle STOP
+- document STOP
 - add semantic-release
-- make `require('surveillance/sinks/keen')` work
+- document `require('surveillance/src/sinks/keen')`-style module-require
 - format events correctly for GA
-- maybe switch up surveillance.pipeline.build api (see readme)
+- add more elements!
 
 # Surveillance.js
 
