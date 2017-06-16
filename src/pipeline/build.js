@@ -1,7 +1,34 @@
 /**
- * ## surveillance/pipeline/build
+ * ### surveillance.pipeline.build
+ *
+ * (conf | pipeline) -> Promise(Object -> Object)
  *
  * build a reactiveish pipeline from a simple data structure
+ *
+ * a conf looks like this:
+ *
+ * ```
+ * const conf = {
+ *   pipeline: 'fn',
+ *   elements: {
+ *     fn: event => {...event, annotation: 'fact'}
+ *   }
+ * }
+ * ```
+ *
+ * a pipeline can be:
+ *
+ * - a function
+ *   - in which case it's used as-is.
+ *
+ * - a promise that resolves to a function
+ *
+ * - a string
+ *   - in which case it's treated as a reference to a function in the elements object
+ *
+ * - an array
+ *   - in which case it's treated as an s-expression representing a function call. That call should return a function or a promise representing a function, which is used as-is.
+ *   - the function position (first in array) is treated as a pipeline itself -- it can be a string reference, for example.
  */
 
 const build = async conf => {
