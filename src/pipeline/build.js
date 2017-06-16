@@ -4,7 +4,7 @@
  * build a reactiveish pipeline from a simple data structure
  */
 
-const build = ({ pipeline, elements }) => {
+const build = async ({ pipeline, elements }) => {
   switch (true) {
     case typeof pipeline === 'function':
       return pipeline
@@ -14,8 +14,8 @@ const build = ({ pipeline, elements }) => {
 
     case Array.isArray(pipeline):
       const [ref, ...args] = pipeline
-      const fn = build({ pipeline: ref, elements })
-      return fn(...args)
+      const fn = await build({ pipeline: ref, elements })
+      return await fn(...args)
 
     default:
       throw Error(`unexpected item type in pipeline.\n"${pipeline}"`)
