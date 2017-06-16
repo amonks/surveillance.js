@@ -52,7 +52,7 @@ describe('surveillance.pipeline.build', () => {
 
   it('handles an asynchronous function application', async () => {
     const pipeline = await surveillance.pipeline.build({
-      pipeline: [async a => e => `async-${a}-${e}`, 'application'],
+      pipeline: [async a => async e => `async-${a}-${e}`, 'application'],
     })
     expect(await pipeline('event')).toBe('async-application-event')
   })
