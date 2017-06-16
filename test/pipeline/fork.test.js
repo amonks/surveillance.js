@@ -2,8 +2,6 @@
 
 import * as surveillance from '../..'
 
-console.log('IMPORTED', surveillance)
-
 describe('surveillance.pipeline.fork', () => {
   it('applies a number of functions to a value, returning an array', async () => {
     expect(
