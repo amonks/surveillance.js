@@ -56,5 +56,10 @@
     "rollup-watch": "^4.0.0",
     "webpack": "^2.6.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "globals": {
+      "window": true
+    }
+  }
 }
