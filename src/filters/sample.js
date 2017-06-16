@@ -1,6 +1,5 @@
 import { stop } from '../pipeline'
 
-const n = Math.random()
 /**
  * ### sample
  *
@@ -10,6 +9,8 @@ const n = Math.random()
  */
 
 const sample = ({ rate }) => {
+  const n = Math.random()
+
   if (n < rate) {
     return data => data
   } else {
