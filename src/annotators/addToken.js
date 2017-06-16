@@ -33,9 +33,12 @@ const getToken = () => {
  * addToken saves its token in localStorage and tries to reuse it later. If a token is not found in localStorage (or localStorage errors), it uses a uuid. Even if localStorage errors, the token is kept in memory.
  */
 
-const addToken = data => ({
-  ...data,
-  token: getToken(),
-})
+const addToken = () => {
+  const token = getToken()
+  return data => ({
+    ...data,
+    token,
+  })
+}
 
 export default addToken
