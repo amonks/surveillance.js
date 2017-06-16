@@ -17,7 +17,7 @@ Surveillance.js is a small and extensible library for event pipelines in the bro
 ## Example
 
 ```js
-import s from 'surveillance'
+import * as s from 'surveillance'
 
 // describe your pipeline
 const pipeline = ['pipe'
