@@ -17,7 +17,8 @@
     "build:watch": "webpack --watch",
     "lint": "pre-commit run --all-files",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "@amonks/webpack-helpers": "^2.0.0",
