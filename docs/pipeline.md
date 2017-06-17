@@ -73,6 +73,22 @@ like build, but returns immediately and enqueues events until the pipeline is bu
 
 
 
+### surveillance.pipeline.select
+
+Select and possibly rename keys from an object.
+
+two forms:
+
+if the config argument is an array of string keys, select
+will return a filtered object with only those keys.
+
+if you want to rename the keys, pass an object that maps from
+the old name to the new name.
+
+See the tests for examples.
+
+
+
 ### surveillance.pipeline.stop
 
 String
