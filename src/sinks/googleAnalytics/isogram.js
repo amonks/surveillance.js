@@ -20,12 +20,12 @@ const isogram = trackingId => {
   window.ga.l = new Date().getTime()
 
   // create a new script element
-  var script = document.createElement('script')
+  var script = window.document.createElement('script')
   script.src = '//www.google-analytics.com/analytics.js'
   script.async = true
 
   // insert the script element into the document
-  var firstScript = document.getElementsByTagName('script')[0]
+  var firstScript = window.document.getElementsByTagName('script')[0]
   firstScript.parentNode.insertBefore(script, firstScript)
 
   window.ga('create', trackingId, { cookieDomain: 'none' })
