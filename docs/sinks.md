@@ -1,3 +1,17 @@
+### surveillance.sinks.googleAnalytics
+
+({ trackingId: string }) => Object => Object
+
+
+
+
+
+
+
+
+
+
+
 ### surveillance.sinks.log
 
 ({ logger: function, message: String }) -> Object -> Object
